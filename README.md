@@ -19,3 +19,15 @@
         $(eval $(call benchmark,foo))
        ```
        2. Add it to the `.PHONY` targets
+## Adding simple http benchmark
+- If your program is a simple server that takes a http request on fixed port and return a response and you want to measure statistics such as throughput and latency (we are using [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) for this) you can create the benchmark as fallows
+  - Example `httpLoop`
+  1. Similar to simple benchmark create the benchmark directory and `test.bal` file
+  2. For this we need to use the `httpBench.sh` benchmark runner
+```bash
+    ln -s ../httpBench.sh bench.sh
+```
+    - NOTE: it expect your endpoint to be `http://localhost:8290/test1/data`
+
+  3. Create a `req.json` file that has the request you want to send to the server
+  4. Similar to simple benchmark update the Makefile

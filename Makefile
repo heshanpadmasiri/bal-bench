@@ -20,6 +20,7 @@ endef
 
 $(eval $(call benchmark,helloWorld))
 $(eval $(call benchmark,foreach))
+$(eval $(call benchmark,httpLoop))
 
 $(NEW_PACK_STAMP): $(JBAL_SRC)
 	cd $(JBAL_SRC_DIR); ./gradlew $(GRADLE_BUILD_COMMAND)
