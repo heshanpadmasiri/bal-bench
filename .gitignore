@@ -7,3 +7,4 @@ tmp/
 *.jar
 currentPack/
 newPack/
+*.stamp
