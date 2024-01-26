@@ -24,9 +24,9 @@
   - Example `httpLoop`
   1. Similar to simple benchmark create the benchmark directory and `test.bal` file
   2. For this we need to use the `httpBench.sh` benchmark runner
-```bash
+    ```bash
     ln -s ../httpBench.sh bench.sh
-```
+    ```
     - NOTE: it expect your endpoint to be `http://localhost:8290/test1/data`
 
   3. Create a `req.json` file that has the request you want to send to the server
