@@ -12,17 +12,23 @@ NEW_PACK=./newPack/jballerina-tools-$(JBAL_VERSION)
 GRADLE_BUILD_COMMAND=clean build -x check
 
 ## Benchmark src
-### Hello world
-HELLO_WORLD_DIR=./helloWorld
-HELLO_WORLD_SRC=$(wildcard $(HELLO_WORLD_DIR)/*.sh) $(wildcard $(HELLO_WORLD_DIR)/*.bal)
 
-helloWorld: $(NEW_PACK_STAMP) $(HELLO_WORLD_SRC)
-	cd $(HELLO_WORLD_DIR); ./bench.sh
+define benchmark
+$1: $(NEW_PACK_STAMP) $$(wildcard ./$1/*.sh) $$(wildcard ./$1/*.bal)
+	cd ./$1; ./bench.sh
+endef
+
+$(eval $(call benchmark,helloWorld))
+$(eval $(call benchmark,foreach))
 
 $(NEW_PACK_STAMP): $(JBAL_SRC)
 	cd $(JBAL_SRC_DIR); ./gradlew $(GRADLE_BUILD_COMMAND)
+	rm -rf $(NEW_PACK)
 	mv $(JBAL_PACK) $(NEW_PACK)
 	@touch $@
 
-.PHONY: helloWorld
+clean:
+	rm -rf *.stamp
+
+.PHONY: clean helloWorld foreach
 # end
