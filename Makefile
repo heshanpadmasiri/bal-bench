@@ -18,9 +18,11 @@ $1: $(NEW_PACK_STAMP) $$(wildcard ./$1/*.sh) $$(wildcard ./$1/*.bal)
 	cd ./$1; ./bench.sh
 endef
 
+#TODO use the foreach macro
 $(eval $(call benchmark,helloWorld))
 $(eval $(call benchmark,foreach))
 $(eval $(call benchmark,httpLoop))
+$(eval $(call benchmark,nballerinaBench))
 
 $(NEW_PACK_STAMP): $(JBAL_SRC)
 	cd $(JBAL_SRC_DIR); ./gradlew $(GRADLE_BUILD_COMMAND)

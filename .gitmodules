@@ -1,0 +1,3 @@
+[submodule "nballerina"]
+	path = nballerina
+	url = git@github.com:ballerina-platform/nballerina.git
