@@ -32,7 +32,7 @@ function whileLoop(int[] values) returns int {
 }
 
 public function main() {
-    int[] values = generateValues(1000000);
+    int[] values = generateValues(100);
     int _ = feLoop(values);
     int _ = intLoop(values);
     int _ = whileLoop(values);

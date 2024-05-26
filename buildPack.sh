@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
-
-JBAL_VERSION="2201.8.4"
+set -e
+JBAL_VERSION="2201.9.0-SNAPSHOT"
 BAL_LANG_DIR="$HOME/Projects/ballerina-lang"
 BAL_PACK="$BAL_LANG_DIR/distribution/zip/jballerina-tools/build/extracted-distributions/jballerina-tools-$JBAL_VERSION"
 BENCH_DIR="$HOME/Projects/bal-bench"

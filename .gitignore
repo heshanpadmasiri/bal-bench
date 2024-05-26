@@ -5,6 +5,7 @@ tmp/
 
 *.class
 *.jar
+*.jps
 currentPack/
 newPack/
 *.stamp

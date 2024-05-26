@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 
-JBAL_VERSION="2201.8.4"
+set -x
+JBAL_VERSION="2201.9.0-SNAPSHOT"
 CURRENT_BAL=$(realpath "../currentPack/jballerina-tools-$JBAL_VERSION/bin/bal")
 NEW_BAL=$(realpath "../newPack/jballerina-tools-$JBAL_VERSION/bin/bal")
 
+rm -f "current.jar"
+rm -f "new.jar"
+
 NBALLERINA_DIR="../nballerina/compiler"
+
+cleanAndRebuildDependencies() {
+    rm -rf ~/.ballerina
+}
 
 build() {
     BAL="$1"
@@ -16,5 +24,5 @@ build() {
     popd || exit 1
 }
 
-build "$CURRENT_BAL" "current.jar"
 build "$NEW_BAL" "new.jar"
+build "bal" "current.jar"

@@ -4,4 +4,4 @@
 ../build.sh test.bal
 
 # benchmark
-hyperfine "java -jar new.jar" "java -jar current.jar"
+hyperfine --warmup 5 "java -jar new.jar" "java -jar current.jar"

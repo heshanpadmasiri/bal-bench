@@ -243,3 +243,135 @@ function merge5(any[] v1, any[] v2) returns any[] {
     }
     return result;
 }
+
+function merge6(any[] v1, any[] v2) returns any[] {
+    any[] result = [];
+    int i1 = 0;
+    int i2 = 0;
+    int len1 = v1.length();
+    int len2 = v2.length();
+    while true {
+        if i1 < len1 {
+            if i2 < len2 {
+                if <int>v1[i1] <= <int>v2[i2] {
+                    result.push(v1[i1]);
+                    i1 = i1 + 1;
+                }
+                else {
+                    result.push(v2[i2]);
+                    i2 = i2 + 1;
+                }
+                continue;
+            }
+        }
+        break;
+    }
+    while i1 < len1 {
+        result.push(v1[i1]);
+        i1 = i1 + 1;
+    }
+    while i2 < len2 {
+        result.push(v2[i2]);
+        i2 = i2 + 1;
+    }
+    return result;
+}
+
+function merge7(any[] v1, any[] v2) returns any[] {
+    any[] result = [];
+    int i1 = 0;
+    int i2 = 0;
+    int len1 = v1.length();
+    int len2 = v2.length();
+    while true {
+        if i1 < len1 {
+            if i2 < len2 {
+                if <int>v1[i1] <= <int>v2[i2] {
+                    result.push(v1[i1]);
+                    i1 = i1 + 1;
+                }
+                else {
+                    result.push(v2[i2]);
+                    i2 = i2 + 1;
+                }
+                continue;
+            }
+        }
+        break;
+    }
+    while i1 < len1 {
+        result.push(v1[i1]);
+        i1 = i1 + 1;
+    }
+    while i2 < len2 {
+        result.push(v2[i2]);
+        i2 = i2 + 1;
+    }
+    return result;
+}
+
+function merge8(any[] v1, any[] v2) returns any[] {
+    any[] result = [];
+    int i1 = 0;
+    int i2 = 0;
+    int len1 = v1.length();
+    int len2 = v2.length();
+    while true {
+        if i1 < len1 {
+            if i2 < len2 {
+                if <int>v1[i1] <= <int>v2[i2] {
+                    result.push(v1[i1]);
+                    i1 = i1 + 1;
+                }
+                else {
+                    result.push(v2[i2]);
+                    i2 = i2 + 1;
+                }
+                continue;
+            }
+        }
+        break;
+    }
+    while i1 < len1 {
+        result.push(v1[i1]);
+        i1 = i1 + 1;
+    }
+    while i2 < len2 {
+        result.push(v2[i2]);
+        i2 = i2 + 1;
+    }
+    return result;
+}
+
+function merge9(any[] v1, any[] v2) returns any[] {
+    any[] result = [];
+    int i1 = 0;
+    int i2 = 0;
+    int len1 = v1.length();
+    int len2 = v2.length();
+    while true {
+        if i1 < len1 {
+            if i2 < len2 {
+                if <int>v1[i1] <= <int>v2[i2] {
+                    result.push(v1[i1]);
+                    i1 = i1 + 1;
+                }
+                else {
+                    result.push(v2[i2]);
+                    i2 = i2 + 1;
+                }
+                continue;
+            }
+        }
+        break;
+    }
+    while i1 < len1 {
+        result.push(v1[i1]);
+        i1 = i1 + 1;
+    }
+    while i2 < len2 {
+        result.push(v2[i2]);
+        i2 = i2 + 1;
+    }
+    return result;
+}
