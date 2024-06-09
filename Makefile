@@ -30,6 +30,7 @@ $(eval $(call benchmark,nballerinaBench))
 $(eval $(call benchmark,typeLoop))
 $(eval $(call benchmark,typeLoopSimple))
 $(eval $(call benchmark,typeLoopSingleton))
+$(eval $(call benchmark,listTypeLoop))
 
 $(NEW_PACK_STAMP): $(JBAL_SRC)
 	cd $(JBAL_SRC_DIR); ./gradlew $(GRADLE_BUILD_COMMAND)
